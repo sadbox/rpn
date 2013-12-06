@@ -3,9 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
+	"io"
 	"math"
-    "io"
-    "os"
+	"os"
 	"strconv"
 )
 
@@ -49,9 +49,9 @@ func main() {
 	var input string
 	for {
 		_, err := fmt.Scan(&input)
-        if err == io.EOF {
-            os.Exit(0)
-        } else if err != nil {
+		if err == io.EOF {
+			os.Exit(0)
+		} else if err != nil {
 			panic(err)
 		}
 		number, err := strconv.ParseFloat(input, 64)
